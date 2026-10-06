@@ -258,8 +258,8 @@ body.export .story{transform:none}
 *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 </style></head><body>
 <div class="editbar"><span>Modo edición · <b class="ed-n">0</b> historias marcadas como subidas</span><span class="sp"></span>
-<button type="button" class="ed-dl">Descargar publicadas.js</button><button type="button" class="ed-copy ghost">Copiar</button><button type="button" class="ed-reset ghost">Deshacer cambios</button>
-<span class="hint">Tus marcas se guardan en este navegador. Para que el cliente las vea, sube el archivo publicadas.js al repositorio de GitHub y sustituye el anterior.</span></div>
+<button type="button" class="ed-dl">Descargar publicadas.json</button><button type="button" class="ed-copy ghost">Copiar</button><button type="button" class="ed-reset ghost">Deshacer cambios</button>
+<span class="hint">Tus marcas se guardan en este navegador. Para que el cliente las vea, sube el archivo publicadas.json al repositorio de GitHub y sustituye el anterior.</span></div>
 <header class="page-h"><div class="eyebrow">drive padel sevilla · planificación</div><h1>Historias de Instagram</h1>
 <p>Planificación mensual de historias (1080×1920), de lunes a viernes. Los lunes, miércoles y viernes hay dos historias. Las historias ya publicadas aparecen tachadas con el sello <b>✓ Subida</b>.</p>
 <div class="legend"><span style="background:#1B2A35;color:#E7E4DB">lunes · navy</span><span style="background:#E7E4DB;color:#1B2A35">martes · beige</span><span style="background:#335144;color:#E7E4DB">miércoles · verde</span><span style="background:#ADC1B5;color:#1B2A35">jueves · salvia</span><span style="background:#BBAF96;color:#1B2A35">viernes · foto</span></div><div class="total"></div></header>
@@ -290,7 +290,7 @@ if(sid){
     $('.total').textContent='Total: '+done+' de '+all+' historias subidas';
     $('.ed-n').textContent=cur.size;
   }
-  function json(){return '// Historias ya subidas. Sustituye este archivo en GitHub para actualizar la página.\nwindow.PUBLICADAS = '+JSON.stringify([...cur].sort(),null,2)+';\n'}
+  function json(){return JSON.stringify({publicadas:[...cur].sort()},null,2)+'\n'}
   function store(){try{localStorage.setItem(KEY,JSON.stringify([...cur]))}catch(e){}}
   // hoy + mes abierto por defecto
   const t=new Date(),iso=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');
@@ -299,14 +299,18 @@ if(sid){
   if(EDIT){
     document.body.classList.add('edit');
     $$('.tick').forEach(b=>b.onclick=()=>{const id=b.closest('.item').dataset.id;cur.has(id)?cur.delete(id):cur.add(id);store();render()});
-    $('.ed-dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([json()],{type:'text/javascript'}));a.download='publicadas.js';a.click();toast('publicadas.js descargado')};
+    $('.ed-dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([json()],{type:'application/json'}));a.download='publicadas.json';a.click();toast('publicadas.json descargado')};
     $('.ed-copy').onclick=()=>navigator.clipboard.writeText(json()).then(()=>toast('Copiado al portapapeles'),()=>toast('No se pudo copiar'));
     $('.ed-reset').onclick=()=>{cur=new Set(saved);try{localStorage.removeItem(KEY)}catch(e){}render();toast('Vuelve al estado publicado')};
   }
   function load(cb){
-    // publicadas.js funciona al abrir con doble clic y en GitHub; ?v= evita la caché
-    const tryLoad=(src,next)=>{const sc=document.createElement('script');sc.src=src;sc.onload=()=>cb(window.PUBLICADAS||[]);sc.onerror=next;document.head.appendChild(sc)};
-    tryLoad('publicadas.js?v='+Date.now(),()=>tryLoad('publicadas.js',()=>cb([])));
+    // Lee publicadas.json (y, si no existe, publicadas.js) en formato {"publicadas":[...]}
+    const parse=t=>{try{const d=JSON.parse(t);return Array.isArray(d)?d:(d.publicadas||[])}catch(e){const m=t.match(/\[[\s\S]*?\]/);try{return m?JSON.parse(m[0]):[]}catch(e2){return []}}};
+    const tryFile=(names)=>{
+      if(!names.length)return cb([]);
+      fetch(names[0]+'?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.text()}).then(t=>cb(parse(t))).catch(()=>tryFile(names.slice(1)));
+    };
+    tryFile(['publicadas.json','publicadas.js']);
   }
   load(list=>{
     saved=new Set(list);cur=new Set(saved);
