@@ -1,0 +1,204 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DPS · Historias octubre</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Roboto+Mono:wght@400;500&family=Montserrat:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --beige:#E7E4DB; --arena:#BBAF96; --navy:#1B2A35; --salvia:#ADC1B5; --verde:#335144;
+  --hw:800; /* peso del titular */
+  --disp:Montserrat,sans-serif;
+  --grad:linear-gradient(95deg,#2A4A3C 0%,#3F6B57 50%,#6F9A85 100%); --txt:Inter,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#d9d6cc;font-family:Montserrat,sans-serif;color:var(--navy);padding:40px 32px 80px}
+.page-h{max-width:1200px;margin:0 auto 28px}
+.page-h h1{font-weight:600;font-size:28px;letter-spacing:-.02em}
+.page-h p{font-weight:300;font-size:15px;margin-top:6px;max-width:760px;line-height:1.5}
+.section{max-width:1200px;margin:40px auto 0}
+.section h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);margin-bottom:6px}
+.section .sub{font-weight:300;font-size:14px;margin-bottom:18px}
+.row{display:flex;flex-wrap:wrap;gap:28px}
+.item{display:flex;flex-direction:column;gap:10px}
+.cap{font-size:13px;font-weight:500}
+.cap span{font-weight:300;opacity:.7}
+.seg{display:inline-flex;background:#fff;border-radius:999px;padding:4px;gap:4px;margin-top:16px;box-shadow:0 6px 20px rgba(27,42,53,.08)}
+.seg button{font:500 13px Montserrat;border:0;background:transparent;padding:8px 16px;border-radius:999px;cursor:pointer;color:var(--navy)}
+.seg button.on{background:var(--navy);color:var(--beige)}
+
+/* ---------- historia 1080x1920 escalada ---------- */
+.frame{width:324px;height:576px;border-radius:18px;overflow:hidden;box-shadow:0 18px 40px rgba(27,42,53,.18)}
+.story{font-family:var(--txt);width:1080px;height:1920px;transform:scale(.3);transform-origin:0 0;position:relative;overflow:hidden;background:var(--beige)}
+.blob{position:absolute;border-radius:50%;filter:blur(120px)}
+.b1{width:760px;height:760px;background:var(--salvia);opacity:.55;top:-160px;right:-260px}
+.b2{width:700px;height:700px;background:var(--arena);opacity:.45;bottom:-200px;right:-180px}
+.b3{width:520px;height:520px;background:var(--salvia);opacity:.35;bottom:180px;left:-300px}
+.content{position:absolute;inset:250px 80px 230px 80px;display:flex;flex-direction:column}
+.tag{align-self:flex-start;background:rgba(173,193,181,.45);color:var(--verde);font-family:var(--mono);font-weight:400;font-size:36px;letter-spacing:0;padding:14px 30px;border-radius:999px}
+.h{font-family:var(--disp);font-weight:var(--hw);font-size:118px;line-height:1.02;letter-spacing:-.015em;margin-top:40px}
+.h em,.center em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.lead{font-weight:400;letter-spacing:-.01em;font-size:48px;line-height:1.3;margin-top:44px;color:rgba(27,42,53,.82)}
+.lead b,.foot b{font-weight:700;color:var(--navy)}
+.foot{font-weight:400;letter-spacing:-.01em;font-size:48px;line-height:1.3;color:rgba(27,42,53,.8);margin-top:auto}
+.spacer{flex:1}
+.logo{position:absolute;left:80px;bottom:110px;height:90px;filter:brightness(.18) sepia(.4) hue-rotate(160deg)}
+
+.card{background:rgba(255,255,255,.82);border:1.5px solid rgba(255,255,255,.9);border-radius:40px;box-shadow:0 24px 70px rgba(27,42,53,.09)}
+/* tarjeta de datos */
+.stats{margin-top:70px;padding:10px 50px}
+.stats .r{display:flex;justify-content:space-between;align-items:baseline;padding:44px 0;border-bottom:1.5px solid rgba(27,42,53,.08)}
+.stats .r:last-child{border:0}
+.stats .l{font-family:var(--mono);font-weight:400;font-size:36px;color:rgba(27,42,53,.6)}
+.stats .v{font-family:var(--disp);font-weight:800;font-size:96px;letter-spacing:-.03em}
+.stats .v small{font-family:var(--txt);font-size:40px;font-weight:600;letter-spacing:-.01em;margin-left:8px}
+.stats .v.acc{color:var(--verde)}
+/* chat */
+.chat{margin-top:70px;padding:40px}
+.chat .hd{display:flex;align-items:center;gap:24px;padding-bottom:30px;border-bottom:1.5px solid rgba(27,42,53,.07);margin-bottom:34px}
+.av{width:84px;height:84px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--salvia),var(--verde))}
+.hd .t{font-family:var(--disp);font-weight:700;font-size:40px;letter-spacing:-.01em}.hd .s{font-family:var(--mono);font-size:28px;opacity:.6}
+.pill{margin-left:auto;background:var(--navy);color:var(--beige);font-family:var(--mono);font-weight:500;font-size:32px;padding:12px 28px;border-radius:999px}
+.bub{display:table;background:#fff;border-radius:40px;padding:30px 40px;font-family:var(--disp);font-weight:600;letter-spacing:-.01em;font-size:42px;margin-bottom:22px;box-shadow:0 10px 30px rgba(27,42,53,.06)}
+.bub.on{background:var(--navy);color:var(--beige);box-shadow:0 22px 50px rgba(51,81,68,.45)}
+/* mockups */
+.mocks{position:relative;height:820px;margin-top:80px}
+.mock{position:absolute;width:330px;height:600px;border-radius:44px;border:10px solid #fff;background-size:cover;background-position:center;box-shadow:0 30px 70px rgba(27,42,53,.2)}
+.m1{left:10px;top:90px;transform:rotate(-7deg)}
+.m2{left:305px;top:20px;z-index:2}
+.m3{left:600px;top:90px;transform:rotate(7deg)}
+/* grid navegador */
+.win{margin-top:70px;padding:34px}
+.dots{display:flex;gap:14px;margin-bottom:28px}.dots i{width:22px;height:22px;border-radius:50%;background:rgba(27,42,53,.15)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mini{border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 8px 24px rgba(27,42,53,.08)}
+.mini .top{background:var(--navy);height:170px;position:relative;padding:22px}
+.mini .top .n{position:absolute;right:10px;bottom:-24px;font-family:var(--disp);font-weight:500;font-size:150px;line-height:1;color:transparent;-webkit-text-stroke:2px var(--salvia)}
+.mini .top .k{color:var(--beige);font-family:var(--disp);font-weight:700;letter-spacing:-.01em;font-size:25px;position:relative;z-index:1;display:block;max-width:58%;line-height:1.1}
+.mini .bot{padding:20px 22px 26px}
+.mini .bot b{display:block;font-family:var(--disp);font-weight:700;letter-spacing:-.02em;font-size:26px}
+.mini .bot span{font-weight:300;font-size:21px;opacity:.65}
+.bar{height:10px;border-radius:9px;background:rgba(27,42,53,.08);margin-top:16px}
+/* circulo */
+.circ{position:relative;width:820px;height:760px;margin:70px auto 0}
+.circ svg{position:absolute;inset:0}
+.node{position:absolute;transform:translate(-50%,-50%);background:#fff;border-radius:999px;padding:22px 40px;font-family:var(--disp);font-weight:700;letter-spacing:-.02em;font-size:40px;box-shadow:0 16px 40px rgba(27,42,53,.1);white-space:nowrap}
+.node.on{background:var(--navy);color:var(--beige);box-shadow:0 20px 50px rgba(51,81,68,.45)}
+.center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;font-family:var(--disp);font-weight:800;font-size:48px;line-height:1.05;letter-spacing:-.015em;width:340px}
+
+.ask{font-family:var(--disp);font-weight:800;font-size:52px;letter-spacing:-.015em;margin-top:auto}
+.input{display:flex;align-items:center;margin-top:28px;padding:22px 22px 22px 46px;border-radius:999px;font-size:60px;font-weight:400;letter-spacing:-.02em;color:rgba(27,42,53,.45)}
+.input b{font-family:var(--disp);font-weight:800;color:var(--navy);margin-left:14px}
+.send{margin-left:auto;width:110px;height:110px;border-radius:50%;background:var(--navy);display:grid;place-items:center}
+/* oscuro */
+.dark{background:var(--navy);color:var(--beige)}
+.dark .b1{background:var(--verde);opacity:.7}
+.dark .b2{background:var(--salvia);opacity:.18}
+.dark .b3{background:var(--verde);opacity:.4}
+.dark .tag{background:rgba(173,193,181,.18);color:var(--salvia)}
+.dark .h em{background-image:linear-gradient(95deg,#ADC1B5 0%,#E7E4DB 100%)}
+.dark .card{background:rgba(231,228,219,.06);border-color:rgba(231,228,219,.12);box-shadow:0 24px 70px rgba(0,0,0,.25)}
+.dark .stats .r{border-color:rgba(231,228,219,.1)}
+.dark .stats .l{color:rgba(231,228,219,.6)}
+.dark .stats .v.acc{color:var(--salvia)}
+.dark .logo{filter:none;opacity:.9}
+.marker{font-family:"Marker Felt","Permanent Marker",cursive;font-weight:700;color:var(--arena);font-size:84px;transform:rotate(-5deg);display:inline-block;margin-top:24px}
+.btn{align-self:flex-start;background:var(--beige);color:var(--navy);font-family:var(--disp);font-weight:700;letter-spacing:-.02em;font-size:44px;padding:30px 56px;border-radius:999px;box-shadow:0 20px 60px rgba(173,193,181,.35);margin-top:auto}
+@media (max-width:700px){body{padding:24px 16px 60px}.row{justify-content:center}}
+
+.list{margin-top:70px;padding:12px 50px}
+.list .r{display:flex;gap:34px;align-items:baseline;padding:40px 0;border-bottom:1.5px solid rgba(27,42,53,.08)}
+.list .r:last-child{border:0}
+.list .n{font-family:var(--mono);font-size:34px;color:var(--verde);min-width:56px}
+.list .t{font-family:var(--disp);font-weight:700;font-size:46px;line-height:1.2;letter-spacing:-.01em}
+.list .t span{display:block;font-family:var(--txt);font-weight:400;font-size:38px;color:rgba(27,42,53,.62);margin-top:8px;letter-spacing:0}
+.dark .list .r{border-color:rgba(231,228,219,.1)}
+.dark .list .n{color:var(--salvia)}
+.dark .foot{color:rgba(231,228,219,.8)}.dark .foot b{color:var(--beige)}
+.grid.g2{grid-template-columns:repeat(2,1fr);gap:26px}
+.grid.g2 .mini .top{height:170px}
+.grid.g2 .mini .top .k{font-size:36px}
+.grid.g2 .mini .top .n{font-size:170px}
+.grid.g2 .mini .bot b{font-size:34px}.grid.g2 .mini .bot span{font-size:28px}
+.big{margin-top:70px;height:700px;border-radius:44px;background-size:cover;background-position:center;box-shadow:0 30px 70px rgba(27,42,53,.2);border:10px solid #fff}
+.week{max-width:1760px;margin:44px auto 0}
+.week h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);margin-bottom:16px}
+.cap{line-height:1.4;max-width:324px}
+.cap .d{display:block;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--verde);font-weight:400}
+.cap .note{display:block;font-weight:300;font-size:12px;opacity:.75}
+.mocks{height:680px;margin-top:60px}.mock{height:560px;width:310px}.m1{top:70px}.m2{top:0;left:300px}.m3{top:70px;left:590px}
+/* ===== variantes por día ===== */
+.dark .h em,.dark .center em,.forest .h em,.forest .center em,.photo .h em,.photo .center em{background-image:linear-gradient(95deg,#ADC1B5 0%,#E7E4DB 100%)}
+.dark .center,.forest .center,.photo .center{color:var(--beige)}
+.forest{background:#335144;color:var(--beige)}
+.forest .b1{background:var(--salvia);opacity:.28}.forest .b2{background:var(--navy);opacity:.6}.forest .b3{background:var(--salvia);opacity:.14}
+.forest .tag{background:rgba(231,228,219,.14);color:var(--salvia)}
+.forest .card{background:var(--beige);border-color:transparent;color:var(--navy);box-shadow:0 30px 80px rgba(0,0,0,.28)}
+.forest .foot{color:rgba(231,228,219,.8)}.forest .foot b{color:var(--beige)}
+.forest .logo,.photo .logo{filter:none;opacity:.9}
+.sage{background:var(--salvia)}
+.sage .b1{background:var(--beige);opacity:.75}.sage .b2{background:var(--verde);opacity:.35}.sage .b3{background:var(--beige);opacity:.5}
+.sage .tag{background:rgba(27,42,53,.1);color:var(--navy)}
+.sage .h em{background:linear-gradient(180deg,transparent 58%,rgba(231,228,219,.95) 58%,rgba(231,228,219,.95) 92%,transparent 92%);-webkit-background-clip:border-box;background-clip:border-box;color:var(--verde)}
+.sage .foot{color:rgba(27,42,53,.85)}
+.photo{color:var(--beige)}.photo .blob{display:none}
+.bgimg{position:absolute;inset:0;background-size:cover;background-position:center}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,53,.82) 0%,rgba(27,42,53,.45) 40%,rgba(27,42,53,.94) 100%)}
+.photo .tag{background:rgba(231,228,219,.2);color:var(--beige)}
+.photo .card{background:rgba(27,42,53,.45);border-color:rgba(231,228,219,.22);color:var(--beige);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+.photo .foot{color:rgba(231,228,219,.85)}.photo .foot b{color:var(--beige)}
+.photo .chat .hd{border-color:rgba(231,228,219,.15)}
+.photo .list .r{border-color:rgba(231,228,219,.15)}.photo .list .n{color:var(--salvia)}
+.photo .circ circle:first-child{stroke:rgba(231,228,219,.35)}.photo .circ circle+circle{stroke:#ADC1B5}
+.photo .input{color:rgba(231,228,219,.6)}.photo .input b{color:var(--beige)}
+.photo .send{background:var(--beige)}.photo .send svg{stroke:var(--navy)}
+.photo .btn{background:var(--beige)}
+.photo .pill{background:var(--beige);color:var(--navy)}
+.photo .bub,.photo .node{color:var(--navy)}.photo .bub.on,.photo .node.on{color:var(--beige)}
+.vtag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:11px;padding:2px 8px;border-radius:99px;margin-left:6px;vertical-align:1px}
+
+/* ===== gris de referencia + mono cuadrada para textos pequeños ===== */
+:root{--mono:"Roboto Mono",ui-monospace,monospace;--gris:#6E7177;--gris-txt:#5E6166;--gris-claro:#BFC3C8}
+.tag{font-family:var(--mono)}
+.lead,.foot{color:var(--gris-txt)}
+.stats .l{color:var(--gris);font-size:34px}
+.list .n{font-size:32px}
+.list .t span{font-family:var(--mono);font-size:31px;color:var(--gris);letter-spacing:-.01em}
+.hd .s{color:var(--gris);opacity:1;font-size:27px}
+.mini .bot span{font-family:var(--mono);color:var(--gris);opacity:1;font-size:19px}
+.grid.g2 .mini .bot span{font-size:25px}
+.input{color:var(--gris)}
+.dark .foot,.photo .foot{color:var(--gris-claro)}
+.dark .stats .l,.photo .stats .l,.dark .list .t span,.photo .list .t span{color:var(--gris-claro)}
+.sage .foot{color:rgba(27,42,53,.85)}
+.forest .foot{color:rgba(231,228,219,.8)}
+/* ===== todo en Montserrat ===== */
+:root{--mono:Montserrat,sans-serif;--txt:Montserrat,sans-serif}
+.story{font-family:Montserrat,sans-serif}
+.tag{font-family:"Roboto Mono",ui-monospace,monospace;font-weight:400;font-size:36px;letter-spacing:0}
+.lead,.foot{font-family:Montserrat,sans-serif;font-weight:400;font-size:44px;letter-spacing:0;line-height:1.35}
+.lead b,.foot b{font-weight:700}
+.list .t span{font-family:Montserrat,sans-serif;font-weight:400;font-size:30px;letter-spacing:0}
+.list .n{font-family:Montserrat,sans-serif;font-weight:600}
+.stats .l,.hd .s,.mini .bot span,.pill,.input,.stats .v small{font-family:Montserrat,sans-serif}
+/* fotos con caras: texto abajo, foto despejada arriba */
+.bottom .content{justify-content:flex-end}
+.bottom .shade{background:linear-gradient(180deg,rgba(27,42,53,.25) 0%,rgba(27,42,53,.05) 35%,rgba(27,42,53,.7) 62%,rgba(27,42,53,.96) 100%)}
+.bottom .btn{margin-top:60px}
+.bottom .foot{margin-top:50px}
+</style>
+
+<style>
+/* modo export: ?s=N muestra solo la historia N a 1080x1920 */
+body.export{padding:0;background:var(--beige)}
+body.export .page-h,body.export .week h2,body.export .cap{display:none}
+body.export .week{margin:0}
+body.export .frame{width:1080px;height:1920px;border-radius:0;box-shadow:none}
+body.export .story{transform:none}
+@page{size:1080px 1920px;margin:0}
+*{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+</style></head><body>
+<header class="page-h" style="max-width:1760px"><h1>Drive Padel Sevilla · historias octubre 2026</h1>
+<p>19 maquetas, de lunes a viernes, del martes 6 al viernes 30 de octubre. Formato 1080×1920. Series fijas: <b>tip de miércoles</b>, preguntas los jueves y plan o humor los viernes. Sin precios ni horarios concretos.<br>Cada día de la semana tiene su estilo: <b>lunes navy · martes beige · miércoles verde · jueves salvia · viernes foto a sangre</b>.</p></header>
+<section class="week"><h2>Semana 1 · 6–9 oct</h2><div class="row"><div class="item" data-i="1"><div class="frame"><div class="story "><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">drive padel sevilla · since 2016</span><div class="h">No se mide en puntos, <em>sino en momentos.</em></div><div class="mocks"><div class="mock m1" style="background-image:url('dps - contenido/IMG_8700.jpeg')"></div><div class="mock m2" style="background-image:url('dps - contenido/IMG_3176.jpeg')"></div><div class="mock m3" style="background-image:url('dps - contenido/IMG_9629.jpeg')"></div></div><div class="spacer"></div><div class="foot">Aquí se entrena, se compite <b>y se comparte.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">01 · mar 6 oct<span class="vtag" style="background:#E7E4DB;color:#1B2A35">martes · beige</span></span>Manifiesto<span class="note">Presentación de marca. Fotos reales.</span></div></div><div class="item" data-i="2"><div class="frame"><div class="story forest"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">tip de miércoles</span><div class="h">La pala, <em>siempre arriba.</em></div><div class="card list"><div class="r"><span class="n">01</span><span class="t">Espera la bola con la pala delante del cuerpo</span></div><div class="r"><span class="n">02</span><span class="t">Flexiona las piernas, no la espalda</span></div><div class="r"><span class="n">03</span><span class="t">Golpea por delante, nunca a tu lado</span></div></div><div class="spacer"></div><div class="foot">¿Lo pruebas esta semana? <b>Te esperamos en pista.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">02 · mié 7 oct<span class="vtag" style="background:#335144;color:#E7E4DB">miércoles · verde</span></span>Tip · posición de espera<span class="note">Serie "tip de miércoles".</span></div></div><div class="item" data-i="3"><div class="frame"><div class="story sage"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">lo que más nos preguntáis</span><div class="h">¿Y si nunca <em>he jugado?</em></div><div class="card chat"><div class="hd"><div class="av"></div><div><div class="t">Mensajes</div><div class="s">@drivepadelsevilla</div></div><span class="pill">a diario</span></div><div class="bub">Nunca he cogido una pala 😅</div><div class="bub">¿Me costará mucho aprender?</div><div class="bub">¿Hay clases para mi nivel?</div><div class="bub on">Quiero probar 🙌</div></div><div class="spacer"></div><div class="foot">Respuesta corta: <b>empieza, nosotros te guiamos.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">03 · jue 8 oct<span class="vtag" style="background:#ADC1B5;color:#1B2A35">jueves · salvia</span></span>FAQ · empezar desde cero<span class="note">Invita a escribir por DM.</span></div></div><div class="item" data-i="4"><div class="frame"><div class="story photo"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="bgimg" style="background-image:url('dps - contenido/IMG_9560.jpeg');background-position:center"></div><div class="shade"></div><div class="content"><span class="tag">viernes</span><div class="h">Plan de finde: <em>pádel y buena gente.</em></div><div class="circ"><svg viewBox="0 0 820 760"><circle cx="410" cy="380" r="300" fill="none" stroke="rgba(27,42,53,.15)" stroke-width="3"/><circle cx="410" cy="380" r="300" fill="none" stroke="#335144" stroke-width="7" stroke-linecap="round" style="stroke-dasharray:2 20"/></svg><div class="node" style="left:410px;top:80px">Entrena</div><div class="node" style="left:710px;top:380px">Juega</div><div class="node" style="left:410px;top:680px">Comparte</div><div class="node on" style="left:110px;top:380px">Repite</div><div class="center">El mejor plan <em>empieza en pista</em></div></div><div class="ask">¿Te vienes?</div><div class="card input">Escribe <b>PÁDEL</b><span class="send"><svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#E7E4DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></span></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">04 · vie 9 oct<span class="vtag" style="background:#BBAF96;color:#1B2A35">viernes · foto</span></span>Plan de finde<span class="note">CTA por palabra clave: PÁDEL.</span></div></div></div></section><section class="week"><h2>Semana 2 · 12–16 oct</h2><div class="row"><div class="item" data-i="5"><div class="frame"><div class="story dark"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">lunes festivo</span><div class="h">Festivo y con ganas <em>de pista.</em></div><div class="big" style="background-image:url('dps - contenido/IMG_6945.jpeg')"></div><div class="spacer"></div><div class="foot">Disfruta el día. <b>Mañana volvemos con todo.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">05 · lun 12 oct<span class="vtag" style="background:#1B2A35;color:#E7E4DB">lunes · navy</span></span>Festivo<span class="note">Fiesta Nacional. Texto neutro, no menciona si el club abre.</span></div></div><div class="item" data-i="6"><div class="frame"><div class="story "><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">un plan para cada jugador</span><div class="h">Para cada nivel, <em>tu sitio.</em></div><div class="card win"><div class="dots"><i></i><i></i><i></i></div><div class="grid g2"><div class="mini"><div class="top"><span class="k">Empieza aquí</span><span class="n">0</span></div><div class="bot"><b>Tu primera clase</b><span>Conoce la pista</span></div></div><div class="mini"><div class="top"><span class="k">Iniciación</span><span class="n">1</span></div><div class="bot"><b>Iniciación</b><span>Los golpes básicos</span></div></div><div class="mini"><div class="top"><span class="k">Intermedio</span><span class="n">2</span></div><div class="bot"><b>Intermedio</b><span>Técnica y rendimiento</span></div></div><div class="mini"><div class="top"><span class="k">Avanzado</span><span class="n">3</span></div><div class="bot"><b>Avanzado</b><span>Perfecciona y compite</span></div></div></div></div><div class="spacer"></div><div class="foot">¿No sabes cuál es el tuyo? <b>Te ayudamos a verlo.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">06 · mar 13 oct<span class="vtag" style="background:#E7E4DB;color:#1B2A35">martes · beige</span></span>Niveles<span class="note">Niveles del manual de marca.</span></div></div><div class="item" data-i="7"><div class="frame"><div class="story forest"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">tip de miércoles</span><div class="h">En pádel se gana <em>en pareja.</em></div><div class="card list"><div class="r"><span class="n">01</span><span class="t">Di «mía» o «tuya» antes de que bote</span></div><div class="r"><span class="n">02</span><span class="t">Tras cada punto, un gesto con tu compañero</span></div><div class="r"><span class="n">03</span><span class="t">Error compartido, ánimo compartido</span></div></div><div class="spacer"></div><div class="foot">Un buen compañero <b>vale más que un buen remate.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">07 · mié 14 oct<span class="vtag" style="background:#335144;color:#E7E4DB">miércoles · verde</span></span>Tip · jugar en pareja<span class="note">Serie "tip de miércoles".</span></div></div><div class="item" data-i="8"><div class="frame"><div class="story sage"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">lo que nos mueve</span><div class="h">Más que pádel, <em>una forma de vivir el juego.</em></div><div class="card list"><div class="r"><span class="n">01</span><span class="t">Profesionalidad<span>Entrenamientos de calidad y método claro</span></span></div><div class="r"><span class="n">02</span><span class="t">Pasión por el pádel<span>El deporte como superación y disfrute</span></span></div><div class="r"><span class="n">03</span><span class="t">Comunidad<span>Un espacio para crecer juntos</span></span></div><div class="r"><span class="n">04</span><span class="t">Mejora continua<span>Aprender cada día es la base</span></span></div></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">08 · jue 15 oct<span class="vtag" style="background:#ADC1B5;color:#1B2A35">jueves · salvia</span></span>Valores<span class="note">Valores del manual de marca.</span></div></div><div class="item" data-i="9"><div class="frame"><div class="story photo"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="bgimg" style="background-image:url('dps - contenido/IMG_2832.jpeg');background-position:center"></div><div class="shade"></div><div class="content"><span class="tag">viernes de risas</span><div class="h">¿Qué tipo de jugador <em>eres tú?</em></div><div class="card chat"><div class="hd"><div class="av"></div><div><div class="t">Mensajes</div><div class="s">@drivepadelsevilla</div></div><span class="pill">vota</span></div><div class="bub">El que llega 5 min antes ⏱️</div><div class="bub">El de «la última y nos vamos»</div><div class="bub">El que analiza cada punto 🧠</div><div class="bub on">Todos a la vez 😂</div></div><div class="spacer"></div><div class="foot">Cuéntanoslo <b>por DM.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">09 · vie 16 oct<span class="vtag" style="background:#BBAF96;color:#1B2A35">viernes · foto</span></span>Qué jugador eres<span class="note">Añade encima una encuesta o sticker de preguntas de Instagram.</span></div></div></div></section><section class="week"><h2>Semana 3 · 19–23 oct</h2><div class="row"><div class="item" data-i="10"><div class="frame"><div class="story dark"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">lunes</span><div class="h">Donde empieza <em>tu mejor versión.</em></div><div class="mocks"><div class="mock m1" style="background-image:url('dps - contenido/IMG_9598.jpeg')"></div><div class="mock m2" style="background-image:url('dps - contenido/IMG_2832.jpeg')"></div><div class="mock m3" style="background-image:url('dps - contenido/IMG_6945.jpeg')"></div></div><div class="spacer"></div><div class="foot">Nueva semana, <b>nuevas ganas de pista.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">10 · lun 19 oct<span class="vtag" style="background:#1B2A35;color:#E7E4DB">lunes · navy</span></span>Motivación lunes<span class="note">Claim de marca.</span></div></div><div class="item" data-i="11"><div class="frame"><div class="story "><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">since 2016</span><div class="h">Diez años <em>viviendo el pádel.</em></div><div class="card stats"><div class="r"><span class="l">desde</span><span class="v">2016</span></div><div class="r"><span class="l">años en pista</span><span class="v acc">+10</span></div><div class="r"><span class="l">ganas de seguir</span><span class="v">∞</span></div></div><div class="spacer"></div><div class="foot">Gracias a todos los que <b>habéis sido parte.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">11 · mar 20 oct<span class="vtag" style="background:#E7E4DB;color:#1B2A35">martes · beige</span></span>Since 2016<span class="note">Dato real: la marca existe desde 2016.</span></div></div><div class="item" data-i="12"><div class="frame"><div class="story forest"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">tip de miércoles</span><div class="h">5 minutos que <em>te ahorran lesiones.</em></div><div class="card list"><div class="r"><span class="n">01</span><span class="t">Movilidad de hombros y muñecas</span></div><div class="r"><span class="n">02</span><span class="t">Desplazamientos laterales suaves</span></div><div class="r"><span class="n">03</span><span class="t">Peloteo tranquilo antes de apretar</span></div></div><div class="spacer"></div><div class="foot">Calentar no es perder tiempo: <b>es jugar mejor.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">12 · mié 21 oct<span class="vtag" style="background:#335144;color:#E7E4DB">miércoles · verde</span></span>Tip · calentar<span class="note">Serie "tip de miércoles".</span></div></div><div class="item" data-i="13"><div class="frame"><div class="story sage"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">tu horario, tu clase</span><div class="h">Tú pones la hora, <em>nosotros la pista.</em></div><div class="card chat"><div class="hd"><div class="av"></div><div><div class="t">Mensajes</div><div class="s">@drivepadelsevilla</div></div><span class="pill">sin problema</span></div><div class="bub">Salgo tarde de trabajar 😩</div><div class="bub">Solo puedo por las mañanas</div><div class="bub">Mi semana cambia cada lunes</div><div class="bub on">Lo cuadramos juntos 🙌</div></div><div class="spacer"></div><div class="foot">Escríbenos y <b>buscamos tu hueco.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">13 · jue 22 oct<span class="vtag" style="background:#ADC1B5;color:#1B2A35">jueves · salvia</span></span>Horarios flexibles<span class="note">Promesa de la visión de marca: flexibilidad de horarios.</span></div></div><div class="item" data-i="14"><div class="frame"><div class="story photo bottom"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="bgimg" style="background-image:url('dps - contenido/IMG_8160.jpeg');background-position:center 30%"></div><div class="shade"></div><div class="content"><span class="tag">comunidad dps</span><div class="h">Vienes a jugar, <em>te quedas por la gente.</em></div><div class="foot">Drive Padel Sevilla. <b>Donde el juego se vive de verdad.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">14 · vie 23 oct<span class="vtag" style="background:#BBAF96;color:#1B2A35">viernes · foto</span></span>Comunidad<span class="note">Cierre del manifiesto. Texto abajo para no tapar caras.</span></div></div></div></section><section class="week"><h2>Semana 4 · 26–30 oct</h2><div class="row"><div class="item" data-i="15"><div class="frame"><div class="story dark"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">diccionario de pista</span><div class="h">¿Hablas <em>pádel?</em></div><div class="card list"><div class="r"><span class="n">01</span><span class="t">Bandeja<span>Golpe alto para mantener la red</span></span></div><div class="r"><span class="n">02</span><span class="t">Víbora<span>Una bandeja con más efecto… y más mala intención 😏</span></span></div><div class="r"><span class="n">03</span><span class="t">Chiquita<span>Bola suave a los pies del rival</span></span></div><div class="r"><span class="n">04</span><span class="t">Globo<span>Tu mejor amigo cuando no sabes qué hacer</span></span></div></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">15 · lun 26 oct<span class="vtag" style="background:#1B2A35;color:#E7E4DB">lunes · navy</span></span>Diccionario de pista<span class="note">Contenido educativo con humor.</span></div></div><div class="item" data-i="16"><div class="frame"><div class="story "><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">cómo entrenamos</span><div class="h">Entrena con <em>método.</em></div><div class="circ"><svg viewBox="0 0 820 760"><circle cx="410" cy="380" r="300" fill="none" stroke="rgba(27,42,53,.15)" stroke-width="3"/><circle cx="410" cy="380" r="300" fill="none" stroke="#335144" stroke-width="7" stroke-linecap="round" style="stroke-dasharray:2 20"/></svg><div class="node" style="left:410px;top:80px">Técnica</div><div class="node" style="left:710px;top:380px">Táctica</div><div class="node" style="left:410px;top:680px">Partido</div><div class="node on" style="left:110px;top:380px">Mejora</div><div class="center">Cada clase te hace <em>mejor jugador</em></div></div><div class="ask">¿Empezamos?</div><div class="card input">Escribe <b>CLASE</b><span class="send"><svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#E7E4DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></span></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">16 · mar 27 oct<span class="vtag" style="background:#E7E4DB;color:#1B2A35">martes · beige</span></span>Método<span class="note">CTA por palabra clave: CLASE.</span></div></div><div class="item" data-i="17"><div class="frame"><div class="story forest"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">tip de miércoles</span><div class="h">Cuando dudes, <em>globo.</em></div><div class="card list"><div class="r"><span class="n">01</span><span class="t">Úsalo para ganar tiempo y recolocarte</span></div><div class="r"><span class="n">02</span><span class="t">Apunta alto y profundo, cerca del fondo</span></div><div class="r"><span class="n">03</span><span class="t">Ideal cuando la pareja rival sube a la red</span></div></div><div class="spacer"></div><div class="foot">El globo bien tirado <b>es puro arte.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">17 · mié 28 oct<span class="vtag" style="background:#335144;color:#E7E4DB">miércoles · verde</span></span>Tip · el globo<span class="note">Serie "tip de miércoles".</span></div></div><div class="item" data-i="18"><div class="frame"><div class="story sage"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="content"><span class="tag">especial halloween 👻</span><div class="h">Los miedos se quedan <em>fuera de pista.</em></div><div class="card chat"><div class="hd"><div class="av"></div><div><div class="t">Mensajes</div><div class="s">@drivepadelsevilla</div></div><span class="pill">boo</span></div><div class="bub">Miedo a la pared de fondo 👻</div><div class="bub">Miedo al remate del rival</div><div class="bub">Miedo a hacer el ridículo</div><div class="bub on">Aquí se te quitan todos 💪</div></div><div class="spacer"></div><div class="foot">Ven a perderle <b>el miedo al pádel.</b></div></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">18 · jue 29 oct<span class="vtag" style="background:#ADC1B5;color:#1B2A35">jueves · salvia</span></span>Miedos (Halloween)<span class="note">Guiño a Halloween (sáb 31).</span></div></div><div class="item" data-i="19"><div class="frame"><div class="story photo bottom"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="bgimg" style="background-image:url('dps - contenido/IMG_8700.jpeg');background-position:center 40%"></div><div class="shade"></div><div class="content"><span class="tag">adiós, octubre</span><div class="h">Gracias por <em>un mes de pista.</em></div><div class="foot">Entrenamos, aprendimos <b>y compartimos.</b></div><span class="btn">Noviembre, allá vamos →</span></div><img class="logo" src="POST/Logo dps claro - corregido.png" alt=""></div></div><div class="cap"><span class="d">19 · vie 30 oct<span class="vtag" style="background:#BBAF96;color:#1B2A35">viernes · foto</span></span>Cierre de mes<span class="note">Foto sin caras (sombras en pista), texto abajo.</span></div></div></div></section>
+<script>
+const s=new URLSearchParams(location.search).get('s');
+if(s){document.body.classList.add('export');document.querySelectorAll('.item').forEach(it=>{if(it.dataset.i!==s)it.remove()});document.querySelectorAll('.week').forEach(w=>{if(!w.querySelector('.item'))w.remove()});}
+</script></body></html>
